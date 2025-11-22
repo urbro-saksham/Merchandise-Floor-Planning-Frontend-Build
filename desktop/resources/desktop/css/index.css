@@ -428,3 +428,33 @@
     border-radius: 3px;
     border: 2px dashed rgba(0,0,0,0.2);
 }
+
+.ladder {
+    position: relative;
+    width: 60px;
+    height: 120px;
+    background: transparent;
+}
+
+/* Vertical side bars */
+.ladder::before,
+.ladder::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: #6c757d;
+    top: 0;
+}
+
+.ladder::before { left: 0; }
+.ladder::after { right: 0; }
+
+/* Steps */
+.ladder .step {
+    position: absolute;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 6px;
+    background: #6c757d;
+}
